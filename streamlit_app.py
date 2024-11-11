@@ -13,6 +13,31 @@ context = """
             [The Building and Construction Authority leads the CORENET-X project in collaboration with other agencies and industry leaders in the building sector.]
             [Other Government Agencies that support the CORENET-X project are URA, LTA, NEA, NParks, PUB, SCDF, and SLA.]
             [Under the new Regulatory Approval process for Building Works (RABW), the conventional 20+ approval touchpoints are streamlined into 3 key sequential submission gateways, providing a more efficient process for project teams.]
+            CORENET-X Overview:
+            CORENET-X is a multi-agency digital platform developed by BCA and URA, supported by GovTech. It allows Qualified Persons 
+            (QPs) to submit coordinated BIM models for regulatory approval, streamlining the approval process to three gateways: Design, 
+            Construction, and Completion. CORENET-X aims to minimize conflicts, delays, and redundant works in the construction industry.
+            
+            New Regulatory Approval Process:
+            The Regulatory Approval process for Building Works (RABW) replaces the conventional 20+ approval touchpoints with three 
+            sequential submission gateways, enhancing coordination and efficiency in project approvals. This process facilitates joint 
+            submissions from QPs, aligned with multiple agencies’ statutory requirements.
+            
+            CORENET-X User Journey:
+            Project teams collaborate on a common data environment, enabling real-time design review, conflict detection, and resolution 
+            before construction. The streamlined approval gateways promote a more integrated approach to project submissions.
+            
+            BIM Data and Compliance:
+            CORENET-X supports BIM submissions and mandates IFC-SG standards, assisting in compliance documentation. Non-BIM 
+            supplementary documents can also accompany submissions, providing flexibility for diverse project requirements.
+            
+            Agile Development and Phased Onboarding:
+            CORENET-X is being implemented in phases, with mandatory submissions starting from April 1, 2025, for new projects. The 
+            system will integrate further updates progressively, reflecting its agile development approach.
+                                                                                    z
+
+        
+        
         """
 # Ask user for their OpenAI API key via `st.text_input`.
 # Alternatively, you can store the API key in `./.streamlit/secrets.toml` and access it
