@@ -3,22 +3,27 @@ from openai import OpenAI
 
 # Show title and description.
 st.title("💬 Corenet-X Chatbot..🎈")
-st.write(
-    "This is a simple chatbot that uses OpenAI's GPT-3.5 model to generate responses. "
-    "To use this app, you need to provide an OpenAI API key, which you can get [here](https://platform.openai.com/account/api-keys). "
-    "You can also learn how to build this app step by step by [following our tutorial](https://docs.streamlit.io/develop/tutorials/llms/build-conversational-apps)."
-)
-
+st.write("This is a simple chatbot that deals with Conet-X related Queries. ")
+st.write("This is a Capability Demo by UNNI (BCA)")
+context = """
+            [Building and Construction Authority (BCA), Singapore Building Regulations, and CORENET-X Submission Requirements]
+            [The Building and Construction Authority leads the CORENET-X project in collaboration with other agencies and industry leaders in the building sector.]
+            [Other Government Agencies that support the CORENET-X project are URA, LTA, NEA, NParks, PUB, SCDF, and SLA.]
+            [Under the new Regulatory Approval process for Building Works (RABW), the conventional 20+ approval touchpoints are streamlined into 3 key sequential submission gateways, providing a more efficient process for project teams.]
+        """
 # Ask user for their OpenAI API key via `st.text_input`.
 # Alternatively, you can store the API key in `./.streamlit/secrets.toml` and access it
 # via `st.secrets`, see https://docs.streamlit.io/develop/concepts/connections/secrets-management
-openai_api_key = st.text_input("OpenAI API Key", type="password")
-if not openai_api_key:
-    st.info("Please add your OpenAI API key to continue.", icon="🗝️")
+#openai_api_key = st.text_input("OpenAI API Key", type="password")
+openai_api_key = st.secrets["openai"]["secret_key"]
+client = OpenAI(api_key=openai_api_key)
+
+if not client:
+    st.info("API Key is missing.", icon="🗝️")
 else:
 
-    # Create an OpenAI client.
-    client = OpenAI(api_key=openai_api_key)
+    # OpenAI client already exists
+    # client = OpenAI(api_key=openai_api_key)
 
     # Create a session state variable to store the chat messages. This ensures that the
     # messages persist across reruns.
@@ -35,13 +40,13 @@ else:
     if prompt := st.chat_input("What is up?"):
 
         # Store and display the current prompt.
-        st.session_state.messages.append({"role": "user", "content": prompt})
+        st.session_state.messages.append({"role": "user", "content": context+prompt})
         with st.chat_message("user"):
             st.markdown(prompt)
 
         # Generate a response using the OpenAI API.
         stream = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4o-mini",
             messages=[
                 {"role": m["role"], "content": m["content"]}
                 for m in st.session_state.messages
