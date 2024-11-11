@@ -3,10 +3,10 @@ from openai import OpenAI
 
 # Show title and description.
 st.title("💬 Corenet-X Chatbot..🎈")
-st.write("This is a simple chatbot that deals with Conet-X related Queries. ")
-st.write("Designed & Developed by: Unni(BCA)")
-st.write("Type a keyword related to buildings...")
-st.write("Examples: piling, Green Mark, ventilation, \nrising sea level etc.")
+st.write("Simple Chatbot that deals with Conet-X Queries. ")
+st.write("Developed by: Unni(BCA)")
+st.write("Type a keyword related to buildings.")
+st.write("Examples: piling, Green Mark, ventilation, rising sea levels, etc.")
 
 context = """
             [Building and Construction Authority (BCA), Singapore Building Regulations, and CORENET-X Submission Requirements]
