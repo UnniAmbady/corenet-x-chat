@@ -4,7 +4,10 @@ from openai import OpenAI
 # Show title and description.
 st.title("💬 Corenet-X Chatbot..🎈")
 st.write("This is a simple chatbot that deals with Conet-X related Queries. ")
-st.write("This is a Capability Demo by UNNI (BCA)")
+st.write("Designed & Developed by: Unni(BCA)")
+st.write("Type a keyword related to buildings...")
+st.write("Examples: piling, Green Mark, ventilation, \nrising sea level etc.")
+
 context = """
             [Building and Construction Authority (BCA), Singapore Building Regulations, and CORENET-X Submission Requirements]
             [The Building and Construction Authority leads the CORENET-X project in collaboration with other agencies and industry leaders in the building sector.]
@@ -15,6 +18,7 @@ context = """
 # Alternatively, you can store the API key in `./.streamlit/secrets.toml` and access it
 # via `st.secrets`, see https://docs.streamlit.io/develop/concepts/connections/secrets-management
 #openai_api_key = st.text_input("OpenAI API Key", type="password")
+
 openai_api_key = st.secrets["openai"]["secret_key"]
 client = OpenAI(api_key=openai_api_key)
 
