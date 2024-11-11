@@ -6,7 +6,7 @@ st.title("💬 Corenet-X Chatbot..🎈")
 st.write("Simple Chatbot that deals with Conet-X Queries. ")
 st.write("Developed by: Unni(BCA)")
 st.write("Type a keyword related to buildings.")
-st.write("Examples: What's new?, Green Mark, District cooling, etc.")
+st.write("Examples: What's new?, Green Mark, What's in 2025 etc.")
 
 context = """
             [Building and Construction Authority (BCA), Singapore Building Regulations, and CORENET-X Submission Requirements]
