@@ -34,10 +34,6 @@ context = """
             Agile Development and Phased Onboarding:
             CORENET-X is being implemented in phases, with mandatory submissions starting from April 1, 2025, for new projects. The 
             system will integrate further updates progressively, reflecting its agile development approach.
-                                                                                    z
-
-        
-        
         """
 # Ask user for their OpenAI API key via `st.text_input`.
 # Alternatively, you can store the API key in `./.streamlit/secrets.toml` and access it
